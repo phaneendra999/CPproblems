@@ -13,4 +13,6 @@
 
 def dicetoorderedhand(a, b, c):
 	# your code goes here
-	pass
+	a = list((a,b,c))
+	a.sort()
+	return a[2] * 100 + a[1]*10 + a[0]
