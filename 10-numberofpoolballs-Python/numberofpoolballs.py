@@ -7,6 +7,6 @@
 # limit our analysis to a "rack" of 15 balls. Rather, our pool table can contain an unlimited 
 # number of rows. For this problem and the next, you should research Triangular Numbers.
 
-def numberofpoolballs(rows):
+def numberofpoolballs(n):
 	# Your code goes here
-	pass
+	return n*(n+1)/2
