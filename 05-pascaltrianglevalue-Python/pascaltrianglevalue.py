@@ -7,6 +7,8 @@
 
 
 
-
+import math
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if(col - row < 1):
+		return math.factorial(row) / (math.factorial(row - col) * math.factorial(col))
+	return 0
