@@ -15,7 +15,7 @@ def ishappynumber(n):
 		sum = 0
 		while n1 >0:
 			rem = n1 % 10
-			sum = sum = (rem ** 2)
+			sum = sum + (rem ** 2)
 			n1 = n1//10
 		return sum
 	list = []
