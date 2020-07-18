@@ -16,4 +16,19 @@
 
 def ishappynumber(n):
 	# your code goes here
-	pass
+	def sum(i):
+		s= 0
+		while i > 0:
+			res = i%10
+			s = s+(res**2)
+			i = i/10
+		return s
+
+	l = []
+	while sum(n) not in l:
+		result = sum(n)
+		if(result == 1):
+			return True
+		l.append(result)
+		n = result
+	return False
