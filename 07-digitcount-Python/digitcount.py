@@ -4,7 +4,7 @@
 # could do this would be to return len(str(abs(n))), but you cannot do that, since you may not use strings 
 # here! This can be solved with logarithms, but seeing as this is "loops week", you should instead simply 
 # repeatedly remove the ones digit until you cannot.
-
+import math
 def digitcount(n):
 	# your code goes here
-	pass
+	return math.len(str(abs(n)))
