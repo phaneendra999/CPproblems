@@ -4,4 +4,8 @@
 
 def hasconsecutivedigits(n):
 	# your code goes here
-	pass
+	if(n ==0):
+		return False
+	if(n%10 == (n%100)//10):
+		return True
+	return hasconsecutivedigits(abs(n)//10)
