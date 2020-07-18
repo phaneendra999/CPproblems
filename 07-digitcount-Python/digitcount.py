@@ -7,4 +7,11 @@
 import math
 def digitcount(n):
 	# your code goes here
-	return math.len(str(abs(n)))
+	# return len(str(abs(n)))
+	global count
+	if(n//10 == 0):
+		temp = count
+		count =0
+		return temp+1
+	count = count+1
+	return digitcount(abs(n)//10)
