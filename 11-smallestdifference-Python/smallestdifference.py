@@ -6,4 +6,9 @@
 
 def smallestdifference(a):
 	# Your code goes here
-	pass
+	if(len(a) == 0):
+		return -1
+	if(len(a)== 1):
+		return a[0]
+	a.sort()
+	return abs(a[1] - a[0])
