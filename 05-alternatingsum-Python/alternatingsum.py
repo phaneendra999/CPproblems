@@ -4,8 +4,25 @@
 
 
 
-
+result = 0
 def fun_alternatingsum(a): 
-	return 0
+	if(len(l) == 0):
+		return 0
+	return summation(l)
+
+status = True
+def summation(l):
+	global result,status
+	if(len(l)==0):
+		temp = result
+		result = 0
+		status = True
+		return temp
+	if(status):
+		result += l.pop(0)
+		status = False
+	result -= l.pop(0)
+	status = True
+	return summation(l)
 
 
