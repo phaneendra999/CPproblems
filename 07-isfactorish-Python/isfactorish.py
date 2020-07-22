@@ -12,5 +12,19 @@
 
 
 def fun_isfactorish(n):
+	n = abs(n)
+	if(100 <= n <= 999):
+		main_val = n
+		first = n%10
+		n= n//10
+		second = n%10
+		n = n//10
+		third = n
+		if(second ==0 or first == 0):
+			return False
+		if(first == second or second == third or first == third):
+			return False
+		if(main_val % first == main_val % second == main_val % third == 0):
+			return True
 	return False
 
