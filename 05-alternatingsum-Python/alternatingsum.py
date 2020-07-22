@@ -5,7 +5,7 @@
 
 
 result = 0
-def fun_alternatingsum(a): 
+def fun_alternatingsum(l): 
 	if(len(l) == 0):
 		return 0
 	return summation(l)
