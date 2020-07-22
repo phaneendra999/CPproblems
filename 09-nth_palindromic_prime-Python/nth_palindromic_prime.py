@@ -5,6 +5,33 @@
 
 
 
-
+all_primes = []
+palidrome_primes = []
 def fun_nth_palindromic_prime(n):
-	return 0
+	count = 0
+	start_val = 2
+	while count <= n:
+		flag = False
+		for i in all_primes:
+			if(start_val % i) ==0:
+				flag = True
+				break
+		if(not flag):
+			all_primes.append(start_val)
+			if(verify(start_val) and (start_val in all_primes)):
+				palidrome_primes.append(start_val)
+				count += 1
+
+		start_val += 1
+	temp = palidrome_primes[n]
+	all_primes.clear()
+	palidrome_primes.clear()
+	return temp
+def verify(n):
+	n = str(n)
+	for i in range(len(n)):
+		if(n[i] != n[len(n) - i - 1]):
+			return False
+		if(i > (len(n) // 2)):
+			break
+	return True
