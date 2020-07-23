@@ -10,4 +10,12 @@
 
 def inverselookandsay(a):
 	# Your code goes here
-	pass
+	res = []
+	try:
+		for(a,b) in a:
+			for i in range(a):
+				res.append(b)
+
+	except Exception:
+		return res
+	return res
