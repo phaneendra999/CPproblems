@@ -7,4 +7,26 @@
 
 def multipolynomials(p1, p2):
 	# Your code goes here
-	pass
+	l1 = len(p1) - 1
+	l2 = len(p2) - 1
+	first = {}
+	second = {}
+	res = {}
+
+	for i in p1:
+		first[l1] = i
+		l1 = l1 -1
+	for i in p2:
+		second[l2] = i
+		l2 = l2 -1
+
+	for a in first.items():
+		for b in second.items():
+			r = a[0] + b[0]
+			m = a[1] * b[1]
+
+			if(r not in res):
+				res[r] = m
+			else:
+				res[r] += m
+	return list(res.values())
