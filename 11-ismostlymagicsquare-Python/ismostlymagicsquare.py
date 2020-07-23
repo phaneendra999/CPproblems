@@ -1,3 +1,4 @@
+
 # isMostlyMagicSquare(a) [15 pts]
 # Write the function isMostlyMagicSquare(a) that takes an 2d list of numbers, which you may assume is an NxN square 
 # with N>0, and returns True if it is "mostly magic" and False otherwise, where a square is "mostly magic" if:
@@ -15,4 +16,21 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	sum = [0]*((len(a) * 2) + 2)
+	if(len(a) == 1 and len(a[0]) == 1):
+		return True
+	elif len(a) == len(a[0]):
+		for i in range(len(a)):
+			for k in range(len(a[i])):
+				sum[k+len(a[0])] += a[i][k]
+			for j in range(len(a[i])):
+				sum[i] += a[i][j]
+
+				if(i == j):
+					sum[len(a)*2] += a[i][j]
+				if(len(a[i]) -1-i == j):
+					sum[len(a)*2+1] += a[i][j]
+	sum = set(sum)
+	if(len(sum) == 1):
+		return True
+	return False 
