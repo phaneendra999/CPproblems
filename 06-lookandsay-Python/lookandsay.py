@@ -6,7 +6,7 @@
 # lookAndSay([-1,2,7]) == [(1,-1),(1,2),(1,7)]
 # lookAndSay([3,3,8,-10,-10,-10]) == [(2,3),(1,8),(3,-10)]
 # lookAndSay([3,3,8,3,3,3,3]) == [(2,3),(1,8),(4,3)]
-
+import math
 def lookandsay(a):
 	# Your code goes here
 	if(not len(a)):
