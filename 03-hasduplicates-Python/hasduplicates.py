@@ -8,7 +8,7 @@ def hasduplicates(L):
 	all_values = []
 	for i in L:
 		for j in i:
-			if(j not in all_values):
-				all_values.append(j)
-			return True
-	return False
+			all_values.append(j)
+	if len(all_values) == len(set(all_values)):
+		return False
+	return True
