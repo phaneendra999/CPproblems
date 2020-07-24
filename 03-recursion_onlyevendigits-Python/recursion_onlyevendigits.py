@@ -7,6 +7,20 @@
 # So: onlyEvenDigits([43, 23265, 17, 58344]) returns [4, 226, 0, 844]. 
 # Also the function returns the empty list if the original list is empty. 
 # Remember to not use strings. You may not use loops/iteration in this problem.
-
-def fun_recursion_onlyevendigits(l): 
-		return []
+s = 0
+def onlyEvenDigits(L):
+	global s
+	if L > 0:
+		r = L % 10
+		if r %2 == 0:
+			s = s + r*pow(10,len(str(s)))
+		L = L//10
+		return onlyEvenDigits(L)
+	else:
+		a = s//10
+		s = 0
+		return a
+def fun_recursion_onlyevendigits(l):
+	for i in range(len(l)):
+		l[i] = onlyEvenDigits(l[i])
+	return l
