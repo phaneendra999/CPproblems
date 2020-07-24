@@ -16,6 +16,6 @@
 def recursion_secondlargest(L):
 	# Your code goes here
 	L.sort()
-	if(L[0] == int):
+	if(Len(L) <= 1):
 		return None
 	return L[-2]
