@@ -23,12 +23,14 @@ def Binary(L,lo,hi,v):
 	if(lo == hi and mid == hi and mid == lo):
 		a = tuple((mid,L[mid]))
 		res.append(a)
+		return res
 	if(ord(v) == ord(L[mid])):
 		a = tuple((mid,L[mid]))
 		res.append(a)
 	elif(ord(v) < ord(L[mid])):
 		a = tuple((mid,L[mid]))
 		res.append(a)
+		return Binary(L,lo,mid-1,v)
 	elif(ord(v) > ord(L[mid])):
 		a= tuple((mid,L[mid]))
 		res.append(a)
