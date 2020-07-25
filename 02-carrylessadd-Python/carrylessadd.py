@@ -6,5 +6,17 @@
 
 
 def fun_carrylessadd(x, y):
-	return 0
+	xval = 0
+	yval = 0
+	res = 0
+	factor= 1
+	while(x!=0 or y!=0):
+		xval = x%10
+		yval = y%10
+		res += factor * ((xval + yval) % 10)
+		factor *= 10
+		x = x//10
+		y = y//10
+	
+	return res
 
