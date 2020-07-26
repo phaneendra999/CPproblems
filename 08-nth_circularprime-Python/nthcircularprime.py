@@ -22,7 +22,7 @@ def circularprime(n):
 	n = str(n)
 	l1 = len(n)
 	num = int(n)
-	while(i < 11):
+	while(i < l1):
 		rem = int(num % 10)
 		num = int(num/10)
 		num = int((rem *(10 ** (l1-1)) + num))
