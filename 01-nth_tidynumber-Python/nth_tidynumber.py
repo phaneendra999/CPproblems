@@ -7,7 +7,7 @@
 # fun_nth_tidynumber(35) = 46
 def istidy(n):
     n = str(n)
-    l = list(map(int,n))
+    l = lits(map(int,n))
     x = sorted(l)
     if l == x:
         return True
