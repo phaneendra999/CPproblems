@@ -8,6 +8,40 @@
 
 
 import math
+def iskapreharnumber(n):
+    if n > 0:
+
+        x = int(math.pow(n,2))
+        s1 = str(x)
+        y = len(str((x)))       
+        s2 =""
+        s3 =""
+        if(len(s1) > 1):
+             s2 = s1[0:(y//2)]
+             s3 = s1[y//2:y]
+             sum1 = (int(s2)) +(int(s3))
+        s2 =s1
+        sum1 = int(s2)
+        if(n == sum1):
+            
+            return True
+            sum1 -= int(s2)
+            s2 = s2.strip("0")
+            sum1 += int(s2)
+            if(sum1 == n):
+                return True
+            return False
+
 
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    c= 0
+    i = 2
+    if n==0:
+        return 1
+    while(True):
+        if(iskapreharnumber(i)):
+            c += 1
+        if(c == n):
+            break
+        i += 1
+    return i
