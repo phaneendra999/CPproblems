@@ -8,7 +8,7 @@ def isprime(n):
 	for i in range(2,n):
 		if(n%i == 0):
 			return False
-		return True
+	return True
 def primefac(a):
 	i =2
 	flag = 0
@@ -30,6 +30,7 @@ def nthpowerfulnumber(n):
 	j = 2
 	while(i<n):
 		if(primefac(j)):
+
 			i += 1
 		j += 1
 	return j-1
