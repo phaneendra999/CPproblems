@@ -7,7 +7,16 @@
 # will return a 12-digit answer! In particular, this means you cannot just edit isPrime. 
 # Hint: you may need to generate only Carol numbers, and then test those as you go 
 # for primality (and you may need to think about that hint for a while for it to make sense!).
-
+def Carol_numbers(i):
+    x = ((2**i - 1) ** 2 - 2)
+    return x
 
 def fun_nth_carolprime(n):
-    return 0
+    i = 2
+    c = 0
+    while(True):
+        y = Carol_numbers(i)
+        if c == n:
+            return y
+        c += 1
+        i += 1
