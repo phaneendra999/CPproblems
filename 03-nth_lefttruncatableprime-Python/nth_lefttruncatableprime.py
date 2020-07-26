@@ -9,6 +9,28 @@
 
 
 import math
-
+def isprime(n):
+    if n > q:
+        for i in range(2,n):
+            if(n % i == 0):
+                return False
+        return True
+def truncatable(n):
+    if "0" not in str(n) and isprime(n):
+        if (n<10):
+            return True
+        n = str(n)
+        n = int(n[1:len(n)])
+        if(isprime(n)):
+            return truncatable(n)
+        return False
+    return False
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    i = 2
+    j = -1
+    while(True):
+        if truncatable(i):
+            j += 1
+        if(j ==n):
+            return i
+        i += 1
