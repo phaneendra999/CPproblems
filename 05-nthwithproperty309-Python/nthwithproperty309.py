@@ -6,11 +6,11 @@
 def property_s(i):
 	x = i ** 5
 	str1 = str(x)
-	y = len(str1)
+	# y = len(str1)
 	l =[]
 	if(len(str1) >= 9):
 		for each in str1:
-			l.append(each,str1.count(each))
+			l.append((each,str1.count(each)))
 		l = sorted(set(l))
 		if(len(l) == 10):
 			return True
@@ -30,4 +30,3 @@ def nthwithproperty309(n):
 				return i
 			i += 1
 		i+=1
-		
